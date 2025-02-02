@@ -11,7 +11,7 @@ defineProps(["links"]);
             <img :src="`/icons/${key}.png`" class="link-icon" alt="link-icon">
             <p class="link-text"> {{ link.text }} </p>
             <div class="link-devider"></div>
-            <FancyLink icon="share" border="primary" :href="link.address" target="_blank"> {{link.title}} </FancyLink>
+            <FancyLink border="primary" :href="link.address" target="_blank"> {{link.title}} </FancyLink>
         </div>
     </section>
 </template>
@@ -24,7 +24,8 @@ defineProps(["links"]);
     
     display: flex;
     justify-content: space-evenly;
-
+    gap: 16px;
+    
     .link-card {
         position: relative;
         display: flex;
@@ -71,6 +72,26 @@ defineProps(["links"]);
         }
     }
 
+}
+
+@media only screen and (max-width: 1360px) {
+    .links {
+        flex-wrap: wrap;
+        gap: 48px;
+        .link-card {
+            width: 40%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .links {
+        flex-wrap: wrap;
+        gap: 64px;
+        .link-card {
+            width: 100%;
+        }
+    }
 }
 
 </style>

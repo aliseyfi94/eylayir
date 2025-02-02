@@ -135,7 +135,8 @@ defineProps(["courses"]);
                     .content {
                         display: flex;
                         flex-direction: column;
-                        align-items: flex-start;
+                        align-items: center;
+                        justify-content: center;
                         gap: 24px;
                         padding: 36px;
                         border-radius: 22px;
@@ -143,6 +144,7 @@ defineProps(["courses"]);
                         overflow: hidden;
                         transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
                         width: 100%;
+                        min-height: 250px;
                         .para {
                             z-index: 1;
                             opacity: 1;
@@ -233,4 +235,27 @@ defineProps(["courses"]);
         }
     }
 }
+
+
+@media only screen and (max-width: 1360px) {
+    .download-list .download-item {
+        width: 50% !important;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .download-list .download-item {
+        width: 100% !important;
+    }
+    .card .content {
+        padding-top: 64px !important;
+    }
+
+    .links-wraper {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px !important;
+    }
+}
+
 </style>
