@@ -8,7 +8,7 @@ defineProps(["links"]);
     <section id="useful-links" class="links">
         <div v-for="(link, key) in links" class="link-card">
             <strong class="link-head"> {{ key }} </strong>
-            <img :src="`/icons/${key}.png`" class="link-icon" alt="link-icon" />
+            <img :src="`/landing/${key}.png`" class="link-icon" alt="link-icon" />
             <p class="link-text">{{ link.text }}</p>
             <div class="link-devider"></div>
             <FancyLink border="primary" :href="link.address" target="_blank">

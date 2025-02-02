@@ -19,7 +19,7 @@ defineProps({
 
 <template>
     <a class="fancy-link" :class="`${theme}-theme ${border}-border`">
-        <img v-if="icon" :src="`/icons/${icon}.png`" class="link-icon" alt="link-icon">
+        <img v-if="icon" :src="`/landing/${icon}.png`" class="link-icon" alt="link-icon">
         <slot />
     </a>
 </template>

@@ -9,7 +9,7 @@ defineProps(["courses"]);
         <div class="area-header">
             <div class="icon-area">
                 <img
-                    src="/icons/download.png"
+                    src="/landing/download.png"
                     class="download-icon"
                     alt="download-icon"
                 />
@@ -28,7 +28,7 @@ defineProps(["courses"]);
                 <div v-for="(course, key) in courses" class="download-item">
                     <div class="card">
                         <div class="seasons-info">
-                            <img src="/icons/layers-fill.png" class="seasons-icon" alt="seasons-icon">
+                            <img src="/landing/layers-fill.png" class="seasons-icon" alt="seasons-icon">
                             <span class="seasons-text"> تعداد فصل </span>
                             <span class="seasons-count">{{ course.seasons }}</span>
                         </div>
