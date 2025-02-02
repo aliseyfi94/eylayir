@@ -1,31 +1,29 @@
 <script setup>
-import FancyLink from '@/Components/FancyLink.vue';
+import FancyLink from "@/Components/FancyLink.vue";
 
 defineProps(["links"]);
 </script>
 
 <template>
     <section id="useful-links" class="links">
-        <div v-for="link, key in links" class="link-card">
+        <div v-for="(link, key) in links" class="link-card">
             <strong class="link-head"> {{ key }} </strong>
-            <img :src="`/icons/${key}.png`" class="link-icon" alt="link-icon">
-            <p class="link-text"> {{ link.text }} </p>
+            <img :src="`/icons/${key}.png`" class="link-icon" alt="link-icon" />
+            <p class="link-text">{{ link.text }}</p>
             <div class="link-devider"></div>
-            <FancyLink border="primary" :href="link.address" target="_blank"> {{link.title}} </FancyLink>
+            <FancyLink border="primary" :href="link.address" target="_blank">
+                {{ link.title }}
+            </FancyLink>
         </div>
     </section>
 </template>
 
 <style scoped lang="scss">
-
-
-
 .links {
-    
     display: flex;
     justify-content: space-evenly;
     gap: 16px;
-    
+
     .link-card {
         position: relative;
         display: flex;
@@ -42,17 +40,14 @@ defineProps(["links"]);
 
         .link-icon {
             width: 100px;
-            height: 100px;            
+            height: 100px;
         }
 
         .link-head {
-
-            $head-height : 32px;
-
             text-transform: capitalize;
             position: absolute;
-            line-height: $head-height;
-            top: -$head-height / 2;
+            line-height: 32px;
+            top: -16px;
             right: 50%;
             transform: translateX(50%);
             background-color: var(--primary-2);
@@ -60,7 +55,6 @@ defineProps(["links"]);
             padding: 0 24px;
             border-radius: 12px;
         }
-
 
         .link-devider {
             border-bottom: 2px solid var(--primary);
@@ -71,7 +65,6 @@ defineProps(["links"]);
             text-align: justify;
         }
     }
-
 }
 
 @media only screen and (max-width: 1360px) {
@@ -93,5 +86,4 @@ defineProps(["links"]);
         }
     }
 }
-
 </style>
