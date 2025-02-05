@@ -55,6 +55,11 @@ defineProps(["courses", "links"]);
             امکانات جدید و بیشتر، راه اندازی خواهد شد...
         </h4>
         <ul class="footer-links">
+            <li class="footer-item">
+                <a href="https://github.com/eylay?tab=repositories" target="_blank" class="footer-link">
+                    گیتهاب من
+                </a>
+            </li>
             <li class="footer-item" v-for="(link, key) in links">
                 <a :href="link.address" target="_blank" class="footer-link">
                     {{ link.title }}
@@ -66,8 +71,6 @@ defineProps(["courses", "links"]);
 
 <style lang="scss">
 .main {
-    direction: rtl;
-    font-family: "Rubik";
 
     .tools {
         display: flex;

@@ -1,3 +1,7 @@
+<script setup>
+import FancyLink from '@/Components/FancyLink.vue';
+</script>
+
 <template>
     <header id="banner" class="banner">
         <div class="content">
@@ -12,6 +16,15 @@
                 آیتم‌هایی مثل دانلود فابل‌های مورد نیاز دوره‌ها، لینک‌های خاص
                 و...
             </p>
+            <hr />
+            <p class="mb-4">
+                همچنین پروژه‌هایی که در دوره‌های آموزشی انجام می‌شن رو هم روی گیتهاب قرار دادم.
+                <br />
+                تو دوره‌ی آموزشی گفته شده که کدوم ریپازیتوری مربوط به اون دوره هستش
+            </p>
+            <FancyLink icon="github-v1" href="https://github.com/eylay?tab=repositories" target="_blank">
+                گیتهاب من
+            </FancyLink>
         </div>
         <div class="overally"></div>
     </header>
@@ -56,7 +69,7 @@
         p {
             font-weight: 500;
             font-size: 20px;
-            line-height: 3rem;
+            line-height: 2rem;
         }
     }
 
